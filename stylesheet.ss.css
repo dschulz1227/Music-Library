@@ -5,6 +5,7 @@
 
 tbody {
     width: 80%;
+    text-align: left;
 }
 
 tr {
@@ -37,5 +38,18 @@ tr {
 }
 
 th{
-    
+text-decoration: underline;
+color: blue;
+
+}
+
+h1{
+   width: 100% ;
+    align-self: center;
+    font-family: MyriadPro;
+    text-decoration: underline;
+}
+
+body{
+    text-align: center;
 }
