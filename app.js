@@ -35,14 +35,14 @@ $(document).ready(function () {
                 genre.innerHTML = data[i]["genre"];
                 releaseDate.innerHTML = data[i]["releaseDate"];
 
-                $("td:nth-child(1)").addClass("artist"); // does this need to be inside loop?
-                $("td:nth-child(2)").addClass("album");
-                $("td:nth-child(3)").addClass("title");     //
-                $("td:nth-child(4)").addClass("genre");
-                $("td:nth-child(5)").addClass("releaseDate");
+                
             }
             $("tr:nth-child(2n)").addClass("shading");
-
+            $("td:nth-child(1)").addClass("artist"); // does this need to be inside loop?
+            $("td:nth-child(2)").addClass("album");
+            $("td:nth-child(3)").addClass("title");     //
+            $("td:nth-child(4)").addClass("genre");
+            $("td:nth-child(5)").addClass("releaseDate");
         },
         error: function (jQxhr, textStatus, errorThrown) {
             console.log(errorThrown);
