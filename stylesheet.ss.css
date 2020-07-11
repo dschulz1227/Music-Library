@@ -11,3 +11,31 @@ tr {
     display: flex;
     justify-content: space-between;
 }
+
+.artist {
+    width: 20%;
+}
+
+.album {
+    width: 15%;
+}
+
+.title {
+    width: 30%;
+}
+
+.genre {
+    width: 20%;
+}
+
+.releaseDate {
+    width: 13%;
+}
+
+.shading{
+    background-color: khaki;
+}
+
+th{
+    
+}
