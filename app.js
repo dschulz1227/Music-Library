@@ -10,7 +10,7 @@ $(document).ready(function () {
             let row = table.insertRow(-1);
 
             for (let i = 0; i < columnCount; i++) {
-                let headerCell = document.createElement("TH");
+                let headerCell = document.createElement("th");
                 headerCell.innerHTML = headers[i];
                 row.appendChild(headerCell);
             }
@@ -37,8 +37,8 @@ $(document).ready(function () {
 
                 
             }
-            $("tr:nth-child(2n)").addClass("shading");
-            $("td:nth-child(1)").addClass("artist"); // does this need to be inside loop?
+            $("tr:nth-child(2n)").addClass("shading"); //every other line will be shaded
+            $("td:nth-child(1)").addClass("artist"); 
             $("td:nth-child(2)").addClass("album");
             $("td:nth-child(3)").addClass("title");     //
             $("td:nth-child(4)").addClass("genre");
@@ -48,8 +48,27 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
-    
-})
+     $("#filter").click(function(){
+        let data = [];
+
+        let userInput=prompt("Enter search criteria")
+        if (userInput==="artist"){
+            let userInputArtist =prompt("Who is the artist you are looking for?");
+            if(userInput ==="The Beatles"){
+
+                for (let i =0; i < data.length; i++){
+                    let results = [];
+                    if artistdata[i].artist == userInput
+
+            }
+            }
+
+        }
+        
+     })
+
+     })
+
 
 
 //call filter function within Ready function
