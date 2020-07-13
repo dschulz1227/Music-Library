@@ -48,7 +48,14 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
+    
 })
+
+
+//call filter function within Ready function
+
+
+
 
 /* look up how to call function and modify page in jquery/ajax
 userSelect // drop down menu (artist, album, etc)
