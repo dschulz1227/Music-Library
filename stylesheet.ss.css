@@ -3,6 +3,11 @@
     justify-content: center;
 }
 
+#newTable{
+    display: flex;
+    justify-content: center;
+}
+
 tbody {
     width: 80%;
     text-align: left;

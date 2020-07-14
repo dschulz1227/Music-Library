@@ -48,13 +48,75 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
+
+
+
+    ///////////
         
-     
+    $.ajax({
+        url: "http://www.devcodecampmusiclibrary.com/api/music",
+        dataType: "json",
+        type: 'get',
+        success: function (data, testStatus, jQxhr) {
+            let table = document.getElementById("newTable");
+            let headers = ["Artist", "Album", "Title", "Genre", "Release Date"];
+            let columnCount = headers.length;
+            let row = table.insertRow(-1);
+            let results = document.getElementById(detailChoice);
+
+            for (let i = 0; i < columnCount; i++) {
+                let headerCell = document.createElement("th");
+                headerCell.innerHTML = headers[i];
+                row.appendChild(headerCell);
+            }
+                $("th:nth-child(1)").addClass("artist");
+                $("th:nth-child(2)").addClass("album");
+                $("th:nth-child(3)").addClass("title");
+                $("th:nth-child(4)").addClass("genre");
+                $("th:nth-child(5)").addClass("releaseDate");
+                
+            
+            $("table").filter(input);
+
+            // console.log(data);
+            // filteredData = data.filter(function(el) {
+            // if(el.genre === whatTheyTypedIn) {
+            // return true;
+        }
+                
+                // row = table.insertRow(i + 1);
+                // artist = row.insertCell(0);
+                // album = row.insertCell(1);
+                // title = row.insertCell(2);
+                // genre = row.insertCell(3);
+                // releaseDate = row.insertCell(4);
+
+                // artist.innerHTML = data[i]["artist"];
+                // album.innerHTML = data[i]["album"];
+                // title.innerHTML = data[i]["title"];
+                // genre.innerHTML = data[i]["genre"];
+                // releaseDate.innerHTML = data[i]["releaseDate"];
+
+                
+            
+            $("tr:nth-child(2n)").addClass("shading"); //every other line will be shaded
+            $("td:nth-child(1)").addClass("artist"); 
+            $("td:nth-child(2)").addClass("album");
+            $("td:nth-child(3)").addClass("title");     //
+            $("td:nth-child(4)").addClass("genre");
+            $("td:nth-child(5)").addClass("releaseDate");
+        },
+        error: function (jQxhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    })
 
 
 
 
 })
+
+
 function filterData() {
     event.preventDefault();
     let userSelection = document.getElementById("filterSelection");
@@ -63,7 +125,7 @@ function filterData() {
     let selectionDetail = document.getElementById("detailChoice");
     let userDetailSelecttion = selectionDetail.value;
         console.log(userDetailSelecttion);
-    let results = strUser && userDetailSelecttion;
+    var results = strUser && userDetailSelecttion;
     return results;
 
     }
@@ -94,3 +156,25 @@ for (let i = 0; i < data.length; i++) { // may need to worry about text casing (
 }
 return resultsData as new table
 */
+
+function myFunction() {
+    // Declare variables
+    let input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
