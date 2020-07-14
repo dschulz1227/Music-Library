@@ -38,17 +38,26 @@
             }
           }
         }
+
+        artistSearch(){
+            if (userSelect == "Artist"){
+            for (let i=0; i < artistdata.length; i++){
+                
+                
+            }
+        }
+        }
         </script>
 </head>
 
 <body>
-    <h1>Good Music and Shitty Music</h1>
+    <h1>devCodeCamp Music Library</h1>
 <br>
 <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">FILTER</button>
     <div id="myDropdown" class="dropdown-content">
 
-      <a>Artist</a>
+      <a .onClick=>Artist</a>
       <a>Album</a>
       <a>Title</a>
       <a>Genre</a>
@@ -56,7 +65,7 @@
 
     </div>
   </div>
-    
+    <br><br>
     <table id="table">
     </table>
     

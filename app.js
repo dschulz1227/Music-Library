@@ -49,8 +49,9 @@ $(document).ready(function () {
         }
     })
      $(".dropdown").click(function(){
-         console.log(".dropdown-content")
+         console.log(dropdown-content)
         let data = [];
+
 
     //     let userInput=prompt("Enter search criteria")
     //     if (userInput==="artist"){
