@@ -48,22 +48,23 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
-     $("#filter").click(function(){
+     $(".dropdown").click(function(){
+         console.log(".dropdown-content")
         let data = [];
 
-        let userInput=prompt("Enter search criteria")
-        if (userInput==="artist"){
-            let userInputArtist =prompt("Who is the artist you are looking for?");
-            if(userInput ==="The Beatles"){
+    //     let userInput=prompt("Enter search criteria")
+    //     if (userInput==="artist"){
+    //         let userInputArtist =prompt("Who is the artist you are looking for?");
+    //         if(userInput ==="The Beatles"){
 
-                for (let i =0; i < data.length; i++){
-                    let results = [];
-                    if artistdata[i].artist == userInput
+    //             for (let i =0; i < data.length; i++){
+    //                 let results = [];
+    //                 if artistdata[i].artist == userInput
 
-            }
-            }
+    //         }
+    //         }
 
-        }
+    //     }
         
      })
 
