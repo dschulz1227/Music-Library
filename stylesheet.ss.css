@@ -48,9 +48,15 @@ h1{
     align-self: center;
     font-family: MyriadPro;
     text-decoration: underline;
+    
+    text-shadow: slategray;
 }
 
 body{
     text-align: center;
 }
 
+
+form{
+    align-content:center;
+}

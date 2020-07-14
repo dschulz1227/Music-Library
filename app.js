@@ -48,30 +48,35 @@ $(document).ready(function () {
             console.log(errorThrown);
         }
     })
-     $(".dropdown").click(function(){
-         console.log(dropdown-content)
-        let data = [];
-
-
-    //     let userInput=prompt("Enter search criteria")
-    //     if (userInput==="artist"){
-    //         let userInputArtist =prompt("Who is the artist you are looking for?");
-    //         if(userInput ==="The Beatles"){
-
-    //             for (let i =0; i < data.length; i++){
-    //                 let results = [];
-    //                 if artistdata[i].artist == userInput
-
-    //         }
-    //         }
-
-    //     }
         
-     })
-
-     })
+     
 
 
+
+
+})
+function filterData() {
+    event.preventDefault();
+    let userSelection = document.getElementById("filterSelection");
+    let strUser = userSelection.options[userSelection.selectedIndex].value;
+        console.log(strUser);
+    let selectionDetail = document.getElementById("detailChoice");
+    let userDetailSelecttion = selectionDetail.value;
+        console.log(userDetailSelecttion);
+    let results = strUser && userDetailSelecttion;
+    return results;
+
+    }
+
+    // did we get back the "selection" from the dropdown
+    // make your API call
+    // let data = [];
+    // let filteredData = [];
+
+    // filteredData = data.filter(function(el) {
+    //     if(el.genre === whatTheyTypedIn) {
+    //         return true;
+    //     }
 
 //call filter function within Ready function
 
